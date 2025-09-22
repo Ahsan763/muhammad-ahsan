@@ -4,7 +4,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { Button } from './ui/button'
 import Image from 'next/image'
-import { Facebook, Linkedin, Twitter } from 'lucide-react'
+import { FaFacebookF, FaGoogle, FaLinkedinIn } from 'react-icons/fa6'
+import { BsStars } from 'react-icons/bs'
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -34,66 +35,38 @@ export default function Hero() {
 
 
   return (
-    // <section ref={el} className="py-12">
-    //   <div className="grid md:grid-cols-2 gap-8 items-center">
-    //     <div>
-    //       <h1 className="text-4xl md:text-5xl font-bold hero-title">Hi — I build beautiful, performant frontends.</h1>
-    //       <p className="mt-4 hero-sub max-w-xl text-gray-600 dark:text-gray-300">I specialize in React, Next.js, Tailwind CSS and creating animated, user-friendly interfaces that convert.</p>
-    //       <div className="mt-6 flex gap-4">
-    //         <a href="#contact" className="hero-cta inline-block px-6 py-3 rounded-lg bg-primary text-white shadow-lg">Contact Me</a>
-    //         <a href="#projects" className="inline-block px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-700">See Projects</a>
-    //       </div>
-    //     </div>
-
-
-    //     <div className="space-y-4">
-    //       <div className="card p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 shadow">
-    //         <h3 className="font-semibold">Latest Project</h3>
-    //         <p className="text-sm text-gray-500 dark:text-gray-300 mt-2">E-commerce dashboard with charts, filters and export features.</p>
-    //       </div>
-
-
-    //       <div className="card p-6 rounded-2xl bg-gradient-to-r from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 shadow">
-    //         <h3 className="font-semibold">Skills</h3>
-    //         <p className="text-sm text-gray-500 dark:text-gray-300 mt-2">React, Next.js, TypeScript, Tailwind, GSAP, Redux, React Query</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
-
-
-    <section className="pt-28">
+    <section className="pt-16 relative z-10">
       <div className="container">
-        <div className='flex flex-col items-center justify-center text-center'>
-          <p className="px-6 py-2 rounded-full border border-gray-500 text-xs uppercase tracking-wider bg-gradient-to-r from-slate-800 to-slate-700 mb-6">
-            UI/UX Designer & WordPress Expert
-          </p>
+        <div className='flex flex-col items-center justify-center text-center mb-4'>
+          <div className="px-6 py-2.5 rounded-full border border-[#243179] text-sm font-medium uppercase tracking-wider bg-gradient-to-l from-[#24317925] to-[#0e78f133]">
+            <h1 className='bg-gradient-to-l from-[#00f7ff] to-[#799dff] bg-clip-text text-transparent'>React/Next.js & Figma to HTML Expert</h1>
+          </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-snug">
-            Designing <span className="italic text-blue-300">Experiences</span> <br />
+          <h2 className="text-4xl md:text-[80px] font-bold leading-[1.16] text-white mb-7 tracking-wide">
+            Developer <span className="italic font-playfair">Experiences</span> <br />
             Building Brands
           </h2>
 
-          <div className="flex gap-4 mt-8">
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 text-lg rounded-lg shadow-md">
+          <div className="flex items-start gap-4">
+            <Button >
               View Recent Work
             </Button>
-            <Button className="bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 text-lg rounded-lg">
+            <Button variant="transparent">
               Book a Call
             </Button>
           </div>
         </div>
 
         <div className='grid grid-cols-3 items-end justify-center'>
-          <div className="mb-8 md:mb-0 max-w-md">
-            <p className="text-sm text-gray-300 leading-relaxed">
+          <div className='max-w-[320px] text-balance pb-12'>
+            <p className="text-xl leading-relaxed bg-gradient-to-r from-white to-[#799dff] bg-clip-text text-transparent mb-5">
               Expert crafting modern, user-friendly websites that elevate brands and drive results.
             </p>
-            <div className="mt-4 flex space-x-4">
-              {[Facebook, Linkedin, Twitter,].map((IconName,i) => {
+            <div className="flex space-x-4">
+              {[FaFacebookF, FaLinkedinIn, FaGoogle,].map((IconName, i) => {
                 return (
-                  <a key={i} href="#" className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-blue-600 transition-colors border border-gray-700">
-                    <IconName />
+                  <a key={i} href="#" className="h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-t from-[#ffffff20] to-[#050509] text-white hover:bg-blue-600 transition-colors ">
+                    <IconName className='text- ' />
                   </a>
                 );
               })}
@@ -104,16 +77,22 @@ export default function Hero() {
             alt="Hero Person"
             width={400}
             height={400}
-            className="rounded-lg "
+            className="rounded-lg grayscale mx-auto"
           />
-          <div className="mt-10 grid grid-cols-2 gap-12 text-center">
-            <div>
-              <h3 className="text-4xl font-bold">5+</h3>
-              <p className="text-gray-400">Years of Experience</p>
+          <div className="pb-12 ml-auto">
+            <div className='ml-auto'>
+              <h3 className="text-6xl font-bold font-playfair bg-gradient-to-t from-[#799dff] to-[#fff] bg-clip-text text-transparent leading-[1.3] text-right ">
+                5
+                <span className='text-4xl font-medium font-outfit text-right'> +</span>
+              </h3>
+              <p className="bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent text-right text-lg">Years of <br /> Experience</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold">99%</h3>
-              <p className="text-gray-400">Happy Clients</p>
+              <h3 className="text-6xl font-bold font-playfair bg-gradient-to-t from-[#799dff] to-[#fff] bg-clip-text text-transparent leading-[1.3] text-right ">
+                99
+                <span className='text-4xl font-medium font-outfit text-right'> %</span>
+              </h3>
+              <p className="bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent text-right text-lg">Happy Clients</p>
             </div>
           </div>
 
@@ -124,13 +103,16 @@ export default function Hero() {
       </div>
 
 
-      <div className="w-full bg-gradient-to-r from-blue-600 to-blue-500 py-8 flex flex-wrap justify-center gap-4 text-sm font-medium">
-        <span className="px-3">⭐ The Best Solution</span>
-        <span className="px-3">⭐ Web Design</span>
-        <span className="px-3">⭐ WordPress Development</span>
-        <span className="px-3">⭐ Branding</span>
-        <span className="px-3">⭐ Webflow</span>
-        <span className="px-3">⭐ Design</span>
+      <div className="w-full bg-gradient-to-r from-[#1a78cc] to-[#016dcc] py-6  gap-4 text-sm font-medium">
+        <div className="container">
+          <div className='flex flex-wrap justify-between'>
+            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> React App Development</span>
+            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Web Designing</span>
+            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Web Development</span>
+            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Figma to HTML</span>
+            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Pixels Perfect Conversion</span>
+          </div>
+        </div>
       </div>
     </section>
   )

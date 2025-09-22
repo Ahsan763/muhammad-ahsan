@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { Button } from './ui/button';
 
 // Main application component
 const App: React.FC = () => {
@@ -31,45 +32,56 @@ const App: React.FC = () => {
     },
   ];
 
-  // Helper component for a project card
   const ProjectCard: React.FC<{ project: typeof projects[0] }> = ({ project }) => {
     const cardRef = useRef(null);
     const imageRef = useRef(null);
     const altImageRef = useRef(null);
 
     useEffect(() => {
-      // Set up initial state for GSAP
       gsap.set(altImageRef.current, {
         clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
       });
     }, []);
 
     const handleMouseEnter = () => {
-      // Animate image "wipe" effect and border glow on hover
-      gsap.to(altImageRef.current, {
-        clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-        duration: 0.8,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        altImageRef.current,
+        {
+          clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+          filter: "blur(20px) contrast(150%)",
+          scale: 1.2,
+          skewX: 20,
+        },
+        {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          filter: "blur(0px) contrast(100%)",
+          scale: 1,
+          skewX: 0,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
 
       gsap.to(cardRef.current, {
-        '--border-angle': '360deg',
+        "--border-angle": "360deg",
         duration: 3,
-        ease: 'linear',
+        ease: "linear",
         repeat: -1,
       });
     };
 
     const handleMouseLeave = () => {
-      // Animate image back and stop border glow
       gsap.to(altImageRef.current, {
-        clipPath: 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)',
+        clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+        filter: "blur(20px) contrast(150%)",
+        scale: 1.1,
+        skewX: -15,
         duration: 0.8,
-        ease: 'power3.in',
+        ease: "power3.in",
       });
 
       gsap.to(cardRef.current, {
-        '--border-angle': '360deg',
+        "--border-angle": "360deg",
         duration: 0,
         repeat: 0,
       });
@@ -108,12 +120,12 @@ const App: React.FC = () => {
             ref={altImageRef}
             src={project.altImage}
             alt={project.title}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover will-change-transform"
           />
           {/* External link icon and button */}
           <button
             className="absolute right-4 top-4 rounded-full bg-black/50 p-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            onClick={() => {}}
+            onClick={() => { }}
           >
             {/* SVG for the external link icon */}
             <svg
@@ -143,51 +155,33 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b13] font-sans text-white">
-      {/* Faded radial gradient background effect */}
-      <div
-        className="absolute inset-0 h-full w-full rounded-full blur-3xl opacity-30"
-        style={{ background: 'radial-gradient(circle at center, #4169E1 0%, transparent 70%)' }}
-      ></div>
-
-      {/* Main content container with subtle gradient overlay */}
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center p-8 py-20 md:p-12 lg:p-24">
-        {/* Subtle background text "WORKS" */}
-        <h2
-          className="absolute -top-12 left-1/2 -translate-x-1/2 select-none font-bold text-gray-800 opacity-5"
-          style={{ fontSize: '10rem', letterSpacing: '0.2em' }}
-        >
-          WORKS
-        </h2>
-
-        {/* Header section */}
-        <div className="text-center">
-          <h1
-            className="text-4xl font-bold leading-tight md:text-5xl"
-            style={{ fontFamily: "'Playfair Display', serif" }} // Using a similar font style
-          >
-            Recent <span className="font-extralight italic">Projects</span>
+    <section className="pt-32 pb-10 relative z-[5]" id='projects'>
+      <div className="absolute top-0 -z-30  h-[500px] w-[500px]  bg-radial from-[#07284a]  to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
+      <div className="container">
+        <div className="text-center relative z-10 mb-14">
+          <h2 className="absolute select-none font-black opacity-30 -top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[180px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+            WORKS
+          </h2>
+          <h1 className="text-4xl md:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3">
+            Recent <span className="font-playfair italic">Projects</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-gray-400 md:text-lg">
+          <p className="mx-auto  md:text-[21px] leading-[1.6] bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent max-w-3xl">
             See How I Transform Concepts into Stunning Websites. A curated
             selection of my latest UI/UX and WordPress projects crafted with
             creativity and precision
           </p>
         </div>
-
-        {/* Projects grid */}
-        <div className="mt-16 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 mb-16">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
-
-        {/* View More Work button */}
-        <button className="mt-20 transform rounded-full border border-blue-400 px-8 py-3 text-blue-400 transition-all duration-300 hover:bg-blue-400 hover:text-white hover:shadow-lg">
+        <Button variant={"transparent"} className='mx-auto flex'>
           View More Work
-        </button>
+        </Button>
       </div>
-    </div>
+
+    </section>
   );
 };
 
