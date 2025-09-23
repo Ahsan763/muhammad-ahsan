@@ -28,13 +28,8 @@ export default function Home() {
 
           <Projects />
           <Services />
-          <div className="relative overflow-hidden py-20">
-            {/* <div className="transform rotate-[7deg] absolute top-2 left-0 right-0 z-10">
-              <MovingBar text="FRONTEND • BACKEND • DEVELOPER • JAVASCRIPT" />
-            </div> */}
-            <FeedbackSlider />
-          </div>
-          <ContactSection />
+          <FeedbackSlider />
+
           <Contact />
         </main>
       </div>

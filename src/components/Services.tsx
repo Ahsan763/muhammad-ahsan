@@ -2,67 +2,86 @@
 
 import { FaFigma, FaWordpress } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
-import { HiOutlineShoppingCart } from "react-icons/hi";
+import { HiOutlineShoppingBag, HiOutlineShoppingCart } from "react-icons/hi";
 import { TbBrandAdobe } from "react-icons/tb";
 import { CgArrowTopRight } from "react-icons/cg";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
+import { FaReact, FaWordpressSimple } from "react-icons/fa6";
+import { FiCodesandbox } from "react-icons/fi";
 
 const services = [
   {
-    title: "UI/UX Design",
-    description:
-      "Crafting intuitive user journeys and pixel-perfect interfaces that boost engagement.",
+    title: "UI/UX Development",
+    description: "Crafting intuitive user journeys and pixel-perfect interfaces that boost engagement.",
     tags: [
-      "User Interface Design",
-      "Interactive Design",
-      "Figma Design",
-      "Wireframing & Prototyping",
+      "Interactive Designs",
+      "Figma to HTML",
+      "Pixel-perfect Conversions",
+      "Stunning Animations",
     ],
-    icon: <MdOutlineDesignServices className="w-10 h-10 text-white" />,
+    icon: FiCodesandbox,
   },
   {
-    title: "Brand Design",
-    description:
-      "Designing unique visual identities that reflect your brand's voice and values.",
+    title: "React/Next.js App Development",
+    description: "Building fast, scalable, and responsive web applications with modern frameworks.",
     tags: [
-      "Logo Design",
-      "Brand Guidelines",
-      "Creative Branding",
-      "Typography & Color",
+      "Frontend Development",
+      "Full-Stack",
+      "Web Applications",
+      "API Integration",
     ],
-    icon: <TbBrandAdobe className="w-10 h-10 text-white" />,
+    icon: FaReact,
   },
   {
     title: "E-Commerce",
-    description:
-      "Creating conversion-focused online stores with seamless checkout experiences.",
+    description: "Creating conversion-focused online stores with seamless checkout experiences.",
     tags: [
       "WooCommerce Developer",
       "Store Design",
       "Payment Gateway",
       "Page Optimization",
     ],
-    icon: <HiOutlineShoppingCart className="w-10 h-10 text-white" />,
+    icon: HiOutlineShoppingBag,
   },
   {
     title: "WordPress Development",
-    description:
-      "Building fast, secure, and scalable WordPress sites tailored to your brand.",
+    description: "Building fast, secure, and scalable WordPress sites tailored to your brand.",
     tags: [
       "WordPress Developer",
       "Speed Optimization",
       "Custom WordPress Website",
       "Elementor",
     ],
-    icon: <FaWordpress className="w-10 h-10 text-white" />,
+    icon: FaWordpressSimple,
   },
 ];
+const ServicesCard = ({ service, index }: any) => {
+  return <div key={service.name} className="p-10 rounded-2xl  border  relative overflow-hidden">
+    <div className="absolute -top-24 -left-24 -z-30 h-[300px] w-[300px] bg-radial from-[#07284a] to-[#04203b00] to-60% opacity-60"></div>
+    <div className="flex items-center space-x-4 mb-4">
+      <service.icon className="w-13 h-13" />
+      <h3 className="text-3xl font-semibold">{service.title}</h3>
+    </div>
 
+    <p className="text-gray-400 mb-6 max-w-[390px]">{service.description}</p>
+
+    <div className="flex flex-wrap gap-x-2 gap-y-3">
+      {service.tags.map((tag: any, i: any) => (
+        <span
+          key={i}
+          className="bg-gradient-to-r from-[#ffffff0e] to-[#0505091a] border border-gray-800 text-gray-400 px-3 py-1 text-sm rounded-full"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+}
 const Services = () => {
   return (
-    <section className="pt-10 relative z-[4]" id="services">
+    <section className="pt-10 pb-16 relative z-[4]" id="services">
       <div className="absolute -top-[100px] -z-30 h-[500px] w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
-      <div className="relative z-10 w-full max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <div className="text-center relative z-10 mb-14">
           <h2 className="absolute select-none font-black opacity-30 -top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[180px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             services
@@ -75,28 +94,17 @@ const Services = () => {
             we Offer
           </h1>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="p-8 rounded-3xl  border  relative overflow-hidden">
-              <div className="absolute -top-24 -left-24 -z-30 h-[300px] w-[300px] bg-radial from-[#07284a] to-[#04203b00] to-60% opacity-60"></div>
-              <div className="flex items-center space-x-4">
-                {service.icon}
-                <h3 className="text-2xl font-semibold">{service.title}</h3>
-              </div>
-
-              <p className="text-gray-400 mb-6">{service.description}</p>
-
-              <div className="flex flex-wrap gap-2">
-                {service.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className="bg-gray-700/50 text-gray-400 px-3 py-1 text-sm rounded-full border border-gray-600"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-8">
+          {services.slice(0, 1).map((service, index) => (
+            <ServicesCard service={service} index={index} />
+          ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {services.slice(1, 3).map((service, index) => (
+              <ServicesCard service={service} index={index} />
+            ))}
+          </div>
+          {services.slice(3, 4).map((service, index) => (
+            <ServicesCard service={service} index={index} />
           ))}
         </div>
       </div>

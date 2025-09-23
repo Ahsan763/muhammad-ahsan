@@ -3,6 +3,7 @@ import { MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
 import { Button } from './ui/button'
+import { FaFileDownload } from 'react-icons/fa'
 
 
 export default function Header() {
@@ -30,9 +31,12 @@ export default function Header() {
         <a href="#blogs" className="hover:text-blue-400 transition text-white">Blogs</a>
       </nav>
 
-      <Button variant="transparent" className='justify-self-end'>
-        Contact
-      </Button>
+      <a href="/hero2.png" download="Muhammad-Ahsan-Iqbal-CV.pdf" className='ml-auto flex w-fit'>
+        <Button variant="transparent">
+          <FaFileDownload className="mr-2 h-4 w-4" />
+          Download CV
+        </Button>
+      </a>
     </header>
   )
 }
