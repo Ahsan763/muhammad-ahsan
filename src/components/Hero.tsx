@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
 
           <h2 className="heading text-4xl md:text-[80px] font-bold leading-[1.16] text-white mb-7 tracking-wide">
-            Developer <span className="italic font-playfair">Experiences</span> <br />
+            Developing <span className="italic font-playfair">Experience</span> <br />
             Building Brands
           </h2>
 

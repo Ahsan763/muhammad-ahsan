@@ -2,30 +2,36 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { Button } from './ui/button';
+import ecom from "../../public/ecom.png"
+import mbi from "../../public/MBI.jpg"
+import pde from "../../public/pde.png"
+import dor from "../../public/dor.png"
+import Image from 'next/image';
+import Link from 'next/link';
 const projects = [
   {
-    title: 'Marhaba Restaurant',
-    subtitle: 'Food Website Design',
-    image: 'https://placehold.co/1000x800/1e293b/a5b4fc?text=Marhaba+Restaurant',
-    altImage: 'https://placehold.co/1000x800/2f534e/f0fdf4?text=Next+Image+1',
+    title: 'Ecom Club AI',
+    subtitle: 'Warehouse and dropshipping web app',
+    image: ecom,
+    link: "https://portal.ecomclub.ai/"
   },
   {
-    title: 'Logistics Website Design',
-    subtitle: 'Modern UI Design',
-    image: 'https://placehold.co/1000x800/1e293b/a5b4fc?text=Logistics+Website',
-    altImage: 'https://placehold.co/1000x800/51296a/f3e8ff?text=Next+Image+2',
+    title: 'My Big Idea MBI',
+    subtitle: 'Educational web app for building stores',
+    image: mbi,
+    link: "https://app.mybigidea.club/"
   },
   {
-    title: 'AIVault - Modern AI',
-    subtitle: 'Services Website',
-    image: 'https://placehold.co/1000x800/1e293b/a5b4fc?text=AIVault+Website',
-    altImage: 'https://placehold.co/1000x800/7a5223/fffbeb?text=Next+Image+3',
+    title: 'DOR',
+    subtitle: 'Multimedia Website',
+    image: dor,
+    link: "https://dor1.vercel.app/"
   },
   {
-    title: 'iTutor - Online Course',
-    subtitle: 'Platform Design',
-    image: 'https://placehold.co/1000x800/1e293b/a5b4fc?text=iTutor+Platform',
-    altImage: 'https://placehold.co/1000x800/1e3b3b/e0f2f1?text=Next+Image+4',
+    title: 'Product Design Experts',
+    subtitle: 'Services Website Design',
+    image: pde,
+    link: "https://www.productdesignexperts.com/"
   },
 ];
 const ProjectCard = ({ project }: any) => {
@@ -84,20 +90,24 @@ const ProjectCard = ({ project }: any) => {
   // };
 
   return (
-    <div
+    <Link
+      href={project?.link}
+      target='_blank'
       // ref={cardRef}
-      className="group relative flex flex-col overflow-hidden rounded-3xl p-5 border  transition-transform duration-300 hover:scale-[1.02] prjcard"
-      // onMouseEnter={handleMouseEnter}
-      // onMouseLeave={handleMouseLeave}
+      className="group relative flex flex-col overflow-hidden rounded-3xl p-5 border prjcard"
+    // onMouseEnter={handleMouseEnter}
+    // onMouseLeave={handleMouseLeave}
     >
       <div className=''></div>
       {/* Project image placeholder */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-        <img
+      <div className="relative aspect-[1/0.85] w-full overflow-hidden rounded-xl">
+        <Image
           // ref={imageRef}
           src={project.image}
           alt={project.title}
-          className="h-full w-full object-cover"
+          width={400}
+          height={400}
+          className="h-full w-full object-fill"
         />
         {/* <img
           ref={altImageRef}
@@ -106,26 +116,7 @@ const ProjectCard = ({ project }: any) => {
           className="absolute inset-0 h-full w-full object-cover will-change-transform"
         /> */}
         {/* External link icon and button */}
-        <button
-          className="absolute right-4 top-4 rounded-full bg-black/50 p-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          onClick={() => { }}
-        >
-          {/* SVG for the external link icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-            />
-          </svg>
-        </button>
+
       </div>
 
       {/* Project text details */}
@@ -133,7 +124,7 @@ const ProjectCard = ({ project }: any) => {
         <h3 className="text-xl font-semibold text-white">{project.title}</h3>
         <p className="mt-1 text-sm text-gray-400">{project.subtitle}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 const Projects = () => {
@@ -169,9 +160,8 @@ const Projects = () => {
             Recent <span className="font-playfair italic">Projects</span>
           </h1>
           <p className="desc mx-auto md:text-[21px] leading-[1.6] bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent max-w-3xl">
-            See How I Transform Concepts into Stunning Websites. A curated
-            selection of my latest UI/UX and WordPress projects crafted with
-            creativity and precision
+            See How I Transform Ideas into Pixel-Perfect Web Experiences.
+            A curated selection of my latest React.js, Next.js, and UI/UX projects, built with precision, responsiveness, and modern design practices.
           </p>
         </div>
         <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 mb-16">
