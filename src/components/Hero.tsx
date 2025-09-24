@@ -39,12 +39,12 @@ export default function Hero() {
   return (
     <section className="pt-16 relative z-10" ref={el}>
       <div className="container">
-        <div className='flex flex-col items-center justify-center text-center mb-4'>
-          <div className="headingPill px-8 py-2 rounded-full border border-[#243179] text-base font-medium uppercase tracking-wider bg-[#243179]">
+        <div className='flex flex-col items-center justify-center text-center mb-9 lg:mb-4'>
+          <div className="headingPill px-8 py-2 rounded-full border border-[#243179] text-sm lg:text-base font-medium uppercase tracking-wider bg-[#243179] mb-2 lg:mb-0">
             <h1 className='bg-gradient-to-l text-[#00f7ff] '>React/Next.js & Figma to HTML Expert</h1>
           </div>
 
-          <h2 className="heading text-4xl md:text-[80px] font-bold leading-[1.16] text-white mb-7 tracking-wide">
+          <h2 className="heading md:text-[60px] lg:text-[80px] font-bold leading-[1.3] lg:leading-[1.16] text-white mb-7 tracking-wide">
             Developing <span className="italic font-playfair">Experience</span> <br />
             Building Brands
           </h2>
@@ -63,8 +63,8 @@ export default function Hero() {
         </div>
 
         <div className='grid grid-cols-3 items-end justify-center'>
-          <div className='card max-w-[320px] text-balance pb-12'>
-            <p className="text-xl leading-relaxed bg-gradient-to-r from-white to-[#799dff] bg-clip-text text-transparent mb-5">
+          <div className='card max-w-[320px] text-balance pb-6 sm:pb-8 lg:pb-12'>
+            <p className="lg:text-xl leading-relaxed bg-gradient-to-r from-white to-[#799dff] bg-clip-text text-transparent mb-5">
               Expert crafting modern, user-friendly websites that elevate brands and drive results.
             </p>
             <div className="flex space-x-4">
@@ -82,34 +82,34 @@ export default function Hero() {
             alt="Hero Person"
             width={400}
             height={400}
-            className="card rounded-lg  mx-auto h-[420px] w-auto"
+            className="card rounded-lg  mx-auto lg:h-[420px] lg:w-auto"
           />
-          <div className="card pb-12 ml-auto">
+          <div className="card pb-6 sm:pb-8 lg:pb-12 ml-auto">
             <div className='ml-auto'>
-              <h3 className="text-6xl font-bold font-playfair bg-gradient-to-t from-[#799dff] to-[#fff] bg-clip-text text-transparent leading-[1.3] text-right ">
+              <h3 className="text-4xl lg:text-6xl font-bold font-playfair bg-gradient-to-t from-[#799dff] to-[#fff] bg-clip-text text-transparent leading-[1.3] text-right ">
                 5
                 <span className='text-4xl font-medium font-outfit text-right'> +</span>
               </h3>
-              <p className="bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent text-right text-lg">Years of <br /> Experience</p>
+              <p className="bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent text-right text-sm lg:text-lg">Years of <br /> Experience</p>
             </div>
             <div>
-              <h3 className="text-6xl font-bold font-playfair bg-gradient-to-t from-[#799dff] to-[#fff] bg-clip-text text-transparent leading-[1.3] text-right ">
+              <h3 className="text-4xl lg:text-6xl font-bold font-playfair bg-gradient-to-t from-[#799dff] to-[#fff] bg-clip-text text-transparent leading-[1.3] text-right ">
                 99
                 <span className='text-4xl font-medium font-outfit text-right'> %</span>
               </h3>
-              <p className="bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent text-right text-lg">Happy Clients</p>
+              <p className="bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent text-right text-sm lg:text-lg">Happy Clients</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full bg-gradient-to-r from-[#1a78cc] to-[#016dcc] py-6  gap-4 text-sm font-medium">
+      <div className="w-full bg-gradient-to-r from-[#1a78cc] to-[#016dcc] py-3.5 lg:py-6  gap-4 text-sm font-medium">
         <div className="container">
           <div className='flex flex-wrap justify-between'>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> React App Development</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Web Designing</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Web Development</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Figma to HTML</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Pixels Perfect Conversion</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> React App Development</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Web Designing</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Web Development</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Figma to HTML</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Pixels Perfect Conversion</span>
           </div>
         </div>
       </div>

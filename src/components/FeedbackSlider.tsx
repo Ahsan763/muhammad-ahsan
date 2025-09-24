@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import vince from "../../public/vince.jpg"
@@ -9,7 +9,7 @@ import profile from "../../public/profile.png"
 import AnselmeMotcho from "../../public/Anselme Motcho.jpeg"
 import "swiper/css";
 import "swiper/css/navigation";
-import { FaArrowLeft, FaArrowLeftLong, FaArrowRight, FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
 import { BsStars } from "react-icons/bs";
 
@@ -61,7 +61,7 @@ const FeedbackSlider = () => {
       <div className="absolute -top-[100px] -z-30 h-[500px] w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
       <div className="container">
         <div className="text-center relative z-10 mb-14">
-          <h2 className="absolute select-none font-black opacity-30 -top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[180px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+          <h2 className="absolute select-none font-black opacity-30 -top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             feedback
           </h2>
           <h1 className="text-4xl md:text-7xl font-bold leading-[1.2] font-outfit mb-3 tracking-wide bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">

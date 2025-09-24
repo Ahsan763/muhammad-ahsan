@@ -23,7 +23,7 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="hidden md:flex gap-x-14  text-lg  justify-between">
+      <nav className="hidden lg:flex gap-x-14  text-lg  justify-between">
         <a href="#home" className="hover:text-blue-400 transition text-white">Home</a>
         <a href="#projects" className="hover:text-blue-400 transition text-white">Projects</a>
         <a href="#services" className="hover:text-blue-400 transition text-white">Services</a>
@@ -31,7 +31,7 @@ export default function Header() {
         <a href="#blogs" className="hover:text-blue-400 transition text-white">Blogs</a>
       </nav>
 
-      <a href="/Muhammad Ahsan Iqbal.pdf" download="Muhammad-Ahsan-Iqbal-CV.pdf" className='ml-auto flex w-fit'>
+      <a href="/Muhammad Ahsan Iqbal.pdf" download="Muhammad-Ahsan-Iqbal-CV.pdf" className='ml-auto flex w-fit hidden lg:flex'>
         <Button variant="transparent">
           <FaFileDownload className="mr-2 h-4 w-4" />
           Download CV

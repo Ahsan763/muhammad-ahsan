@@ -94,11 +94,13 @@ const ProjectCard = ({ project }: any) => {
       href={project?.link}
       target='_blank'
       // ref={cardRef}
-      className="group relative flex flex-col overflow-hidden rounded-3xl p-5 border prjcard"
+      className="group relative flex flex-col rounded-2xl p-5 prjcard bg-gradient-to-b from-[#101828] to-[#101828]"
     // onMouseEnter={handleMouseEnter}
     // onMouseLeave={handleMouseLeave}
     >
-      <div className=''></div>
+      <div className="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] bg-gradient-to-b from-[#1468b6] to-[#101828] rounded-2xl -z-10 top-[-2px] left-[-2px]"></div>
+
+
       {/* Project image placeholder */}
       <div className="relative aspect-[1/0.85] w-full overflow-hidden rounded-xl">
         <Image
@@ -149,17 +151,17 @@ const Projects = () => {
     return () => ctx.revert()
   }, [])
   return (
-    <section className="pt-32 pb-24 relative z-[5]" id='projects'>
+    <section className="pt-20 lg:pt-32 pb-16 md:pb-20 lg:pb-24 relative z-[5]" id='projects'>
       <div className="absolute top-0 -z-30  h-[500px] w-[500px]  bg-radial from-[#07284a]  to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
       <div className="container">
-        <div className="text-center relative z-10 mb-20">
-          <h2 className="heading absolute select-none font-black opacity-30 -top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[180px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+        <div className="text-center relative z-10 mb-10 sm:mb-14 lg:mb-20">
+          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             WORKS
           </h2>
-          <h1 className="text-4xl md:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
             Recent <span className="font-playfair italic">Projects</span>
           </h1>
-          <p className="desc mx-auto md:text-[21px] leading-[1.6] bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent max-w-3xl">
+          <p className="desc mx-auto sm:text-lg lg:text-[21px] leading-[1.6] bg-gradient-to-r from-[#fff] to-[#799dff] bg-clip-text text-transparent max-w-3xl">
             See How I Transform Ideas into Pixel-Perfect Web Experiences.
             A curated selection of my latest React.js, Next.js, and UI/UX projects, built with precision, responsiveness, and modern design practices.
           </p>
