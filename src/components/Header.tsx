@@ -19,7 +19,7 @@ export default function Header() {
         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#013880] to-[#0062ff] flex items-center justify-center text-white font-bold">AI</div>
         <div>
           <div className="font-semibold text-white">Muhammad Ahsan Iqbal</div>
-          <div className="text-xs bg-gradient-to-r from-[#00f7ff] to-[#799dff] bg-clip-text text-transparent font-medium">Frontend Developer</div>
+          <div className="text-xs bg-gradient-to-r text-[#00f7ff] font-medium">Frontend Developer</div>
         </div>
       </div>
 
@@ -31,7 +31,7 @@ export default function Header() {
         <a href="#blogs" className="hover:text-blue-400 transition text-white">Blogs</a>
       </nav>
 
-      <a href="/hero2.png" download="Muhammad-Ahsan-Iqbal-CV.pdf" className='ml-auto flex w-fit'>
+      <a href="/Muhammad Ahsan Iqbal.pdf" download="Muhammad-Ahsan-Iqbal-CV.pdf" className='ml-auto flex w-fit'>
         <Button variant="transparent">
           <FaFileDownload className="mr-2 h-4 w-4" />
           Download CV

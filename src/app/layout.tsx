@@ -3,6 +3,7 @@
 import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import CursorFollower from "@/components/CursorFollower";
 
 const playfair = Playfair_Display({
   weight: ['400', '700'],
@@ -29,11 +30,14 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="en" suppressHydrationWarning>
       <body className={`${playfair.variable} ${outfit.variable}`}>
         <ThemeProvider
+
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+          <CursorFollower />
+
           {children}
         </ThemeProvider>
       </body>

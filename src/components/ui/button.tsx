@@ -9,8 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-[#1976cb] to-[#016ecf] ",
-        transparent: "bg-gradient-to-r from-[#ffffff21] to-[#ffffff00] border border-[#1976cb81]",
+        default: "bg-gradient-to-r from-[#1976cb] to-[#016ecf] hover:bg-gradient-to-r hover:from-[#ffffff21] hover:to-[#ffffff00] border border-[#1976cb]",
+        transparent: "bg-gradient-to-r from-[#ffffff21] to-[#ffffff00] border border-[#1976cb81] hover:bg-gradient-to-r hover:from-[#1976cb] hover:to-[#016ecf]",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
@@ -22,7 +22,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        default: "px-7 py-2.5 has-[>svg]:px-7 cursor-pointer font-normal font-outfit leading-[1] text-white text-base",
+        default: "px-7 py-2.5 has-[>svg]:px-7 cursor-pointer font-normal font-outfit leading-[1] text-white text-base transition duration-300",
         sm: "rounded-sm gap-1.5 px-3 has-[>svg]:px-2.5 cursor-pointer",
         lg: "rounded-sm px-6 has-[>svg]:px-4 cursor-pointer",
         icon: "size-9",

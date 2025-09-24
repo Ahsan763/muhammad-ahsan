@@ -40,8 +40,8 @@ export default function Hero() {
     <section className="pt-16 relative z-10" ref={el}>
       <div className="container">
         <div className='flex flex-col items-center justify-center text-center mb-4'>
-          <div className="headingPill px-8 py-2 rounded-full border border-[#243179] text-base font-medium uppercase tracking-wider bg-gradient-to-l from-[#24317925] to-[#0e78f133]">
-            <h1 className='bg-gradient-to-l from-[#00f7ff] to-[#799dff] bg-clip-text text-transparent '>React/Next.js & Figma to HTML Expert</h1>
+          <div className="headingPill px-8 py-2 rounded-full border border-[#243179] text-base font-medium uppercase tracking-wider bg-[#243179]">
+            <h1 className='bg-gradient-to-l text-[#00f7ff] '>React/Next.js & Figma to HTML Expert</h1>
           </div>
 
           <h2 className="heading text-4xl md:text-[80px] font-bold leading-[1.16] text-white mb-7 tracking-wide">
@@ -53,7 +53,7 @@ export default function Hero() {
             <Button onClick={() => router.push("#projects")}>
               View Recent Work
             </Button>
-            <a href="/hero2.png" download="Muhammad-Ahsan-Iqbal-CV.pdf">
+            <a href="/Muhammad Ahsan Iqbal.pdf" download="Muhammad-Ahsan-Iqbal-CV.pdf">
               <Button variant="transparent">
                 <FaFileDownload className="mr-2 h-4 w-4" />
                 Download CV
@@ -78,11 +78,11 @@ export default function Hero() {
             </div>
           </div>
           <Image
-            src="/hero2.png"
+            src="/hero3.png"
             alt="Hero Person"
             width={400}
             height={400}
-            className="card rounded-lg grayscale mx-auto"
+            className="card rounded-lg  mx-auto h-[420px] w-auto"
           />
           <div className="card pb-12 ml-auto">
             <div className='ml-auto'>

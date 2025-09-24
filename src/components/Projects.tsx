@@ -29,81 +29,82 @@ const projects = [
   },
 ];
 const ProjectCard = ({ project }: any) => {
-  const cardRef = useRef(null);
-  const imageRef = useRef(null);
-  const altImageRef = useRef(null);
+  // const cardRef = useRef(null);
+  // const imageRef = useRef(null);
+  // const altImageRef = useRef(null);
 
-  useEffect(() => {
-    gsap.set(altImageRef.current, {
-      clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.set(altImageRef.current, {
+  //     clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
+  //   });
+  // }, []);
 
-  const handleMouseEnter = () => {
-    gsap.fromTo(
-      altImageRef.current,
-      {
-        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-        filter: "blur(20px) contrast(150%)",
-        scale: 1.2,
-        skewX: 20,
-      },
-      {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        filter: "blur(0px) contrast(100%)",
-        scale: 1,
-        skewX: 0,
-        duration: 1,
-        ease: "power3.out",
-      }
-    );
+  // const handleMouseEnter = () => {
+  //   gsap.fromTo(
+  //     altImageRef.current,
+  //     {
+  //       clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+  //       filter: "blur(20px) contrast(150%)",
+  //       scale: 1.2,
+  //       skewX: 20,
+  //     },
+  //     {
+  //       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  //       filter: "blur(0px) contrast(100%)",
+  //       scale: 1,
+  //       skewX: 0,
+  //       duration: 1,
+  //       ease: "power3.out",
+  //     }
+  //   );
 
-    gsap.to(cardRef.current, {
-      "--border-angle": "360deg",
-      duration: 3,
-      ease: "linear",
-      repeat: -1,
-    });
-  };
+  //   gsap.to(cardRef.current, {
+  //     "--border-angle": "360deg",
+  //     duration: 3,
+  //     ease: "linear",
+  //     repeat: -1,
+  //   });
+  // };
 
-  const handleMouseLeave = () => {
-    gsap.to(altImageRef.current, {
-      clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
-      filter: "blur(20px) contrast(150%)",
-      scale: 1.1,
-      skewX: -15,
-      duration: 0.8,
-      ease: "power3.in",
-    });
+  // const handleMouseLeave = () => {
+  //   gsap.to(altImageRef.current, {
+  //     clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+  //     filter: "blur(20px) contrast(150%)",
+  //     scale: 1.1,
+  //     skewX: -15,
+  //     duration: 0.8,
+  //     ease: "power3.in",
+  //   });
 
-    gsap.to(cardRef.current, {
-      "--border-angle": "360deg",
-      duration: 0,
-      repeat: 0,
-    });
-  };
+  //   gsap.to(cardRef.current, {
+  //     "--border-angle": "360deg",
+  //     duration: 0,
+  //     repeat: 0,
+  //   });
+  // };
 
   return (
     <div
-      ref={cardRef}
-      className="group relative flex flex-col overflow-hidden rounded-3xl p-4 shadow-xl backdrop-blur-lg transition-transform duration-300 hover:scale-[1.02] prjcard"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // ref={cardRef}
+      className="group relative flex flex-col overflow-hidden rounded-3xl p-5 border  transition-transform duration-300 hover:scale-[1.02] prjcard"
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
     >
+      <div className=''></div>
       {/* Project image placeholder */}
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
         <img
-          ref={imageRef}
+          // ref={imageRef}
           src={project.image}
           alt={project.title}
           className="h-full w-full object-cover"
         />
-        <img
+        {/* <img
           ref={altImageRef}
           src={project.altImage}
           alt={project.title}
           className="absolute inset-0 h-full w-full object-cover will-change-transform"
-        />
+        /> */}
         {/* External link icon and button */}
         <button
           className="absolute right-4 top-4 rounded-full bg-black/50 p-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
