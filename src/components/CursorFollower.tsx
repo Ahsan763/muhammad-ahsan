@@ -22,7 +22,7 @@ const CursorFollower = () => {
       gsap.to(dotRef.current, {
         x: clientX,
         y: clientY,
-        duration: 0.5, // Adjust this value for more or less lag/smoothness
+        duration: 1, // Adjust this value for more or less lag/smoothness
         ease: "elastic",  // Use "none" for a strictly linear movement
         // We set 'pointerEvents: "none"' in CSS, but 'overwrite: "auto"' is a good practice.
         overwrite: "auto",
