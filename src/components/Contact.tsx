@@ -39,7 +39,7 @@ export default function ContactSection() {
                 <div className="w-11 h-11 flex items-center justify-center rounded-full relative z-10">
                   <div className="absolute w-[calc(100%+4px)] h-[calc(100%+4px)] bg-gradient-to-b from-[#ffffff63] to-[#1468b6] rounded-full -z-10 top-[-2px] left-[-2px]"></div>
                   <div className="w-11 h-11 flex items-center justify-center rounded-full relative z-10 bg-gradient-to-r from-[#2e2e2e] to-[#101828] overflow-hidden">
-                    <Image src="/hero2.png" alt="ahsan" width={44} height={44} className="w-full h-full object-contain" />
+                    <Image src="/hero3.png" alt="ahsan" width={44} height={44} className="w-full h-full object-contain" />
                   </div>
                 </div>
                 <div>
