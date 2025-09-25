@@ -56,11 +56,11 @@ const services = [
   },
 ];
 const ServicesCard = ({ service, index }: any) => {
-  return <div key={service.name} className="p-10 rounded-2xl  border  relative overflow-hidden">
+  return <div key={service.name} className="p-5 sm:p-10 rounded-2xl  border  relative overflow-hidden">
     <div className="absolute -top-24 -left-24 -z-30 h-[300px] w-[300px] bg-radial from-[#07284a] to-[#04203b00] to-60% opacity-60"></div>
     <div className="flex items-center space-x-4 mb-4">
-      <service.icon className="w-13 h-13" />
-      <h3 className="text-3xl font-semibold">{service.title}</h3>
+      <service.icon className="w-9 sm:w-13 h-9 sm:h-13" />
+      <h3 className="text-xl sm:text-3xl font-semibold">{service.title}</h3>
     </div>
 
     <p className="text-gray-400 mb-6 max-w-[390px]">{service.description}</p>
@@ -80,13 +80,13 @@ const ServicesCard = ({ service, index }: any) => {
 const Services = () => {
   return (
     <section className="pt-10 pb-16 relative z-[4]" id="services">
-      <div className="absolute -top-[100px] -z-30 h-[500px] w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
+      <div className="absolute top-[-60px] sm:-top-[100px] -z-30 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
       <div className="container">
         <div className="text-center relative z-10 mb-14">
-          <h2 className="absolute select-none font-black opacity-30 -top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[180px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             services
           </h2>
-          <h1 className="text-4xl md:text-7xl font-bold leading-[1.2] font-outfit mb-3 tracking-wide bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
             Digital Product{" "}
             <span className="font-playfair italic">
               Design <br /> Services

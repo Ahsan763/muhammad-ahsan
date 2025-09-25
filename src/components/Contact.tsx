@@ -15,21 +15,21 @@ const ContactSchema = Yup.object().shape({
 export default function ContactSection() {
   return (
     <section id="contact" className="contact pt-32 relative z-[2]">
-      <div className="absolute -top-[100px] -z-30 h-[500px] w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
+      <div className="absolute top-[-60px] sm:-top-[100px] -z-30 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
 
       <div className="container">
         <div className="text-center relative z-10 mb-16">
-          <h2 className="absolute select-none font-black opacity-30 -top-[80%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[180px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[60%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             contact
           </h2>
-          <h1 className="text-4xl md:text-7xl font-bold leading-[1.2] font-outfit tracking-wide bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
             Get in <span className="font-playfair italic"> Touch </span>
           </h1>
         </div>
-        <div className="grid grid-cols-2 gap-x-20 items-center mb-16">
+        <div className="grid gap-y-12 lg:grid-cols-2 gap-x-20 items-center mb-16">
           <div>
-            <h2 className="text-6xl font-bold leading-[1.25] mb-4">LET’S TALK ABOUT YOUR PROJECT</h2>
-            <p className="text-gray-400 mb-12 text-xl">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-[1.25] mb-4">LET’S TALK ABOUT YOUR PROJECT</h2>
+            <p className="text-gray-400 mb-5 sm:mb-8 lg:mb-12 sm:text-lg lg:text-xl">
               Have a project in mind or just want to say hello? Let’s connect and create
               something amazing together.
             </p>
@@ -147,7 +147,7 @@ export default function ContactSection() {
           </Formik>
         </div>
         <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-        <div className="flex justify-between ggap-x-4 py-10">
+        <div className="flex flex-wrap sm:flex-nowrap gap-y-4 justify-between ggap-x-4 py-10">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#013880] to-[#0062ff] flex items-center justify-center text-white font-bold">AI</div>
             <div>

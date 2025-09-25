@@ -40,16 +40,16 @@ export default function Hero() {
     <section className="pt-16 relative z-10" ref={el}>
       <div className="container">
         <div className='flex flex-col items-center justify-center text-center mb-9 lg:mb-4'>
-          <div className="headingPill px-8 py-2 rounded-full border border-[#243179] text-sm lg:text-base font-medium uppercase tracking-wider bg-[#243179] mb-2 lg:mb-0">
-            <h1 className='bg-gradient-to-l text-[#00f7ff] '>React/Next.js & Figma to HTML Expert</h1>
+          <div className="headingPill px-4 sm:px-8 py-2 rounded-full border border-[#243179]  font-medium uppercase tracking-wider bg-[#243179] mb-4 lg:mb-0">
+            <h1 className='bg-gradient-to-l text-[#00f7ff] text-[11px] sm:text-sm lg:text-base'>React/Next.js & Figma to HTML Expert</h1>
           </div>
 
-          <h2 className="heading md:text-[60px] lg:text-[80px] font-bold leading-[1.3] lg:leading-[1.16] text-white mb-7 tracking-wide">
+          <h2 className="heading text-[28px] md:text-[60px] lg:text-[80px] font-bold leading-[1.3] lg:leading-[1.16] text-white mb-7 tracking-wide">
             Developing <span className="italic font-playfair">Experience</span> <br />
             Building Brands
           </h2>
 
-          <div className="hero-cta flex items-start gap-4">
+          <div className="hero-cta flex items-start gap-2.5 sm:gap-4">
             <Button onClick={() => router.push("#projects")}>
               View Recent Work
             </Button>
@@ -62,7 +62,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className='grid grid-cols-3 items-end justify-center'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 items-end justify-center'>
           <div className='card max-w-[320px] text-balance pb-6 sm:pb-8 lg:pb-12'>
             <p className="lg:text-xl leading-relaxed bg-gradient-to-r from-white to-[#799dff] bg-clip-text text-transparent mb-5">
               Expert crafting modern, user-friendly websites that elevate brands and drive results.
@@ -82,10 +82,10 @@ export default function Hero() {
             alt="Hero Person"
             width={400}
             height={400}
-            className="card rounded-lg  mx-auto lg:h-[420px] lg:w-auto"
+            className="col-span-2 sm:col-span-1 sm:row-auto sm:col-auto row-start-2 card rounded-lg  mx-auto lg:h-[420px] lg:w-auto"
           />
           <div className="card pb-6 sm:pb-8 lg:pb-12 ml-auto">
-            <div className='ml-auto'>
+            <div className='ml-auto mb-3 sm:mb-0'>
               <h3 className="text-4xl lg:text-6xl font-bold font-playfair bg-gradient-to-t from-[#799dff] to-[#fff] bg-clip-text text-transparent leading-[1.3] text-right ">
                 5
                 <span className='text-4xl font-medium font-outfit text-right'> +</span>

@@ -14,7 +14,8 @@ export default function Header() {
 
 
   return (
-    <header className="grid grid-cols-3 items-center px-8 pt-4 relative top-0 z-30">
+    <header className="grid md:grid-cols-3 items-center px-3  sm:px-8 pt-3 sm:pt-4 relative top-0 z-30">
+
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#013880] to-[#0062ff] flex items-center justify-center text-white font-bold">AI</div>
         <div>
@@ -31,7 +32,7 @@ export default function Header() {
         <a href="#blogs" className="hover:text-blue-400 transition text-white">Blogs</a>
       </nav>
 
-      <a href="/Muhammad Ahsan Iqbal.pdf" download="Muhammad-Ahsan-Iqbal-CV.pdf" className='ml-auto flex w-fit hidden lg:flex'>
+      <a href="/Muhammad Ahsan Iqbal.pdf" download="Muhammad-Ahsan-Iqbal-CV.pdf" className='ml-auto w-fit hidden lg:flex'>
         <Button variant="transparent">
           <FaFileDownload className="mr-2 h-4 w-4" />
           Download CV

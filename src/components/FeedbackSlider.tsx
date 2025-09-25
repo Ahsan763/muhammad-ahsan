@@ -58,13 +58,13 @@ const FeedbackSlider = () => {
   const swiperRef = useRef<any>(null);
   return (
     <section className="pt-20  relative z-[3]" id="testimonial">
-      <div className="absolute -top-[100px] -z-30 h-[500px] w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
+      <div className="absolute top-[-60px] sm:-top-[100px] h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
       <div className="container">
         <div className="text-center relative z-10 mb-14">
-          <h2 className="absolute select-none font-black opacity-30 -top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             feedback
           </h2>
-          <h1 className="text-4xl md:text-7xl font-bold leading-[1.2] font-outfit mb-3 tracking-wide bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
             What <span className="font-playfair italic"> Clients </span>{" "} Say  <br />
             About My <span className="font-playfair italic"> Work</span>
           </h1>
@@ -80,7 +80,7 @@ const FeedbackSlider = () => {
             prevEl: ".custom-prev",
             nextEl: ".custom-next",
           }}
-          className="!px-[23%]"
+          className="sm:!px-12 lg:!px-[23%]"
         >
           {testimonials.map((t, i) => (
             <SwiperSlide key={i}>
@@ -117,14 +117,14 @@ const FeedbackSlider = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gradient-to-r from-[#1a78cc] to-[#016dcc] py-6  gap-4 text-sm font-medium">
+      <div className="w-full bg-gradient-to-r from-[#1a78cc] to-[#016dcc] py-3.5 lg:py-6  gap-4 text-sm font-medium">
         <div className="container">
           <div className='flex flex-wrap justify-between'>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> React App Development</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Web Designing</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Web Development</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Figma to HTML</span>
-            <span className="px-3 flex items-center gap-x-2 text-lg text-white"><BsStars className='text-2xl text-sky-200' /> Pixels Perfect Conversion</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> React App Development</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Web Designing</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Web Development</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Figma to HTML</span>
+            <span className="flex items-center sm:gap-x-1 lg:gap-x-2 md:text-xs lg:text-lg text-white"><BsStars className='md:text-lg lg:text-2xl text-sky-200' /> Pixels Perfect Conversion</span>
           </div>
         </div>
       </div>
