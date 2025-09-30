@@ -13,19 +13,15 @@ export default function Home() {
         <title>Ahsan Iqbal — Frontend Developer</title>
         <meta name="description" content="Modern portfolio of Muhammad Ahsan Iqbal — frontend developer" />
       </Head>
-
-
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-gray-100">
         <main>
           <div className="hero">
             <Header />
             <Hero />
           </div>
-
           <Projects />
           <Services />
           <FeedbackSlider />
-
           <Contact />
         </main>
       </div>
