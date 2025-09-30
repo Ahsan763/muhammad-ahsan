@@ -39,7 +39,7 @@ export default function Hero() {
   return (
     <section className="pt-16 relative z-10" ref={el}>
       <div className="container">
-        <div className='flex flex-col items-center justify-center text-center mb-9 lg:mb-4'>
+        <div className='flex flex-col items-center justify-center text-center mb-2 lg:mb-4'>
           <div className="headingPill px-4 sm:px-8 py-2 rounded-full border border-[#243179]  font-medium uppercase tracking-wider bg-[#243179] mb-4 lg:mb-0">
             <h1 className='bg-gradient-to-l text-[#00f7ff] text-[11px] sm:text-sm lg:text-base'>React/Next.js & Figma to HTML Expert</h1>
           </div>
@@ -49,7 +49,7 @@ export default function Hero() {
             Building Brands
           </h2>
 
-          <div className="hero-cta flex items-start gap-2.5 sm:gap-4">
+          <div className="hero-cta flex items-start gap-2.5 sm:gap-4 mb-3">
             <Button onClick={() => router.push("#projects")}>
               View Recent Work
             </Button>
@@ -64,14 +64,14 @@ export default function Hero() {
 
         <div className='grid grid-cols-2 sm:grid-cols-3 items-end justify-center'>
           <div className='card max-w-[320px] text-balance pb-6 sm:pb-8 lg:pb-12'>
-            <p className="lg:text-xl leading-relaxed bg-gradient-to-r from-white to-[#799dff] bg-clip-text text-transparent mb-5">
+            <p className="text-[15px] sm:text-bae lg:text-xl leading-relaxed bg-gradient-to-r from-white to-[#799dff] bg-clip-text text-transparent mb-5">
               Expert crafting modern, user-friendly websites that elevate brands and drive results.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-2 sm:space-x-4">
               {[FaFacebookF, FaLinkedinIn, FaGoogle,].map((IconName, i) => {
                 return (
-                  <a key={i} href="#" className="h-12 w-12 flex items-center justify-center rounded-full bg-gradient-to-t from-[#ffffff20] to-[#050509] text-white hover:bg-blue-600 transition-colors ">
-                    <IconName className='text- ' />
+                  <a key={i} href="#" className="h-9 sm:h-12 w-9 sm:w-12 flex items-center justify-center rounded-full bg-gradient-to-t from-[#ffffff20] to-[#050509] text-white hover:bg-blue-600 transition-colors ">
+                    <IconName className='' />
                   </a>
                 );
               })}
@@ -82,7 +82,7 @@ export default function Hero() {
             alt="Hero Person"
             width={400}
             height={400}
-            className="col-span-2 sm:col-span-1 sm:row-auto sm:col-auto row-start-2 card rounded-lg  mx-auto lg:h-[420px] lg:w-auto"
+            className="col-span-2 sm:row-auto sm:col-auto row-start-2 card rounded-lg  mx-auto lg:h-[420px] max-w-[250px]  sm:w-auto"
           />
           <div className="card pb-6 sm:pb-8 lg:pb-12 ml-auto">
             <div className='ml-auto mb-3 sm:mb-0'>

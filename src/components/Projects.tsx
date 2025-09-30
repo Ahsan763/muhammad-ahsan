@@ -151,11 +151,11 @@ const Projects = () => {
     return () => ctx.revert()
   }, [])
   return (
-    <section className="pt-20 lg:pt-32 pb-16 md:pb-20 lg:pb-24 relative z-[5]" id='projects'>
+    <section className="pt-10 sm:pt-20 lg:pt-32 pb-5 sm:pb-16 md:pb-20 lg:pb-24 relative z-[5]" id='projects'>
       <div className="absolute top-0 -z-30 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px]  bg-radial from-[#07284a]  to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
       <div className="container">
         <div className="text-center relative z-10 mb-10 sm:mb-14 lg:mb-20">
-          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-7xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             WORKS
           </h2>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
@@ -171,9 +171,9 @@ const Projects = () => {
             <ProjectCard key={index} project={project} />
           ))}
         </div>
-        <Button variant={"transparent"} className='mx-auto px-14 flex'>
+        {/* <Button variant={"transparent"} className='mx-auto px-14 flex'>
           View More Work
-        </Button>
+        </Button> */}
       </div>
     </section>
   );
