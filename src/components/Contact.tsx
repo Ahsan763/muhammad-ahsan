@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import Link from "next/link";

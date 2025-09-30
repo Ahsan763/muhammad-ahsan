@@ -1,18 +1,9 @@
 "use client"
-import { MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { useState, useEffect } from 'react'
 import { Button } from './ui/button'
 import { FaFileDownload } from 'react-icons/fa'
-
-
 export default function Header() {
   const { theme, setTheme } = useTheme()
-
-
-
-
-
   return (
     <header className="grid md:grid-cols-3 items-center px-3  sm:px-8 pt-3 sm:pt-4 relative top-0 z-30">
 
