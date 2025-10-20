@@ -7,12 +7,11 @@ import vince from "../../public/vince.jpg"
 import Mads from "../../public/Mads Thorsdal.webp"
 import profile from "../../public/profile.png"
 import AnselmeMotcho from "../../public/Anselme Motcho.jpeg"
-import "swiper/css";
-import "swiper/css/navigation";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
 import { BsStars } from "react-icons/bs";
-
+import "swiper/css";
+import "swiper/css/navigation";
 interface Testimonial {
   name: string;
   title: string;
@@ -57,13 +56,13 @@ const testimonials: Testimonial[] = [
 const FeedbackSlider = () => {
   const swiperRef = useRef<any>(null);
   return (
-    <section className="pt-20  relative z-[3]" id="testimonial">
+    <section className="pt-10 sm:pt-20  relative z-[3]" id="testimonial">
       <div className="absolute top-[-60px] sm:-top-[100px] h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
       <div className="container">
-        <div className="text-center relative z-10 mb-14">
-          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-4xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+        <div className="text-center relative z-10 mb-10 sm:mb-14">
+          <div className="heading absolute select-none font-black opacity-30 -top-[40%] md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-[57px] md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             feedback
-          </h2>
+          </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
             What <span className="font-playfair italic"> Clients </span>{" "} Say  <br />
             About My <span className="font-playfair italic"> Work</span>
@@ -84,23 +83,23 @@ const FeedbackSlider = () => {
         >
           {testimonials.map((t, i) => (
             <SwiperSlide key={i}>
-              <div className="border rounded-2xl flex items-center justify-between relative overflow-hidden">
+              <div className="border p-6 sm:p-0 gap-y-5 sm:gap-y-0 rounded-2xl flex-col sm:flex items-center justify-between relative overflow-hidden">
                 <div className="absolute bottom-[-160px] left-1/2 -translate-x-1/2 -z-30 h-[300px] w-[300px] bg-radial from-[#07284a] to-[#04203b00] to-60% opacity-60"></div>
-                <div className="px-8 py-12 w-[41%] text-center relative">
-                  <div className="h-full absolute right-0 top-0 w-[1px] bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+                <div className="sm:px-8 sm:py-12 w-full sm:w-[41%] sm:text-center relative mb-5 sm:mb-0">
+                  <div className="h-full hidden sm:block  absolute right-0 top-0 w-[1px] bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
 
                   <Image
                     src={t.image}
                     alt={t.name}
-                    className="w-[130px] h-[130px] rounded-full object-cover mb-6 mx-auto"
+                    className="w-24 h-24 sm:w-[130px] sm:h-[130px] rounded-full object-cover mb-3 sm:mb-6 sm:mx-auto"
                     width={150}
                     height={150}
                   />
                   <h3 className="text-lg font-medium">{t.name}</h3>
                   <p className="text-sm ">{t.title}</p>
                 </div>
-                <div className="px-10 py-12 w-[59%]  h-full  ">
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                <div className="sm:px-10 sm:py-12 w-full sm:w-[59%]  h-full  ">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                     {t.quote}
                   </p>
                 </div>

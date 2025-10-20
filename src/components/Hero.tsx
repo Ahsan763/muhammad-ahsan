@@ -82,7 +82,7 @@ export default function Hero() {
             alt="Hero Person"
             width={400}
             height={400}
-            className="col-span-2 sm:row-auto sm:col-auto row-start-2 card rounded-lg  mx-auto lg:h-[420px] max-w-[250px]  sm:w-auto"
+            className="col-span-2 sm:row-auto sm:col-auto row-start-2 card rounded-lg  mx-auto lg:h-[410px] max-w-[250px]  sm:max-w-none sm:w-full object-contain"
           />
           <div className="card pb-6 sm:pb-8 lg:pb-12 ml-auto">
             <div className='ml-auto mb-3 sm:mb-0'>

@@ -79,14 +79,14 @@ const ServicesCard = ({ service, index }: any) => {
 }
 const Services = () => {
   return (
-    <section className="pt-10 pb-16 relative z-[4]" id="services">
+    <section className=" sm:pt-10 pb-6 sm:pb-16 relative z-[4]" id="services">
       <div className="absolute top-[-60px] sm:-top-[100px] -z-30 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] bg-radial from-[#07284a] to-[#04203b00] to-70% left-1/2 -translate-x-1/2"></div>
       <div className="container">
-        <div className="text-center relative z-10 mb-14">
-          <h2 className="heading absolute select-none font-black opacity-30 md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-6xl md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
+        <div className="text-center relative z-10 mb-9 sm:mb-14">
+          <div className="heading absolute select-none font-black opacity-30 -top-[50%] md:-top-[30%] lg:-top-[50%] left-1/2 -translate-x-1/2 uppercase text-[60px] md:text-[120px] lg:text-[170px] -z-10 tracking-wider bg-gradient-to-t from-[#05050900] to-[#262d49] bg-clip-text text-transparent">
             services
-          </h2>
-          <h1 className="text-[30px] sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
+          </div>
+          <h1 className="text-[28px] sm:text-6xl lg:text-7xl font-bold leading-[1.2] font-outfit tracking-wide mb-3 bg-gradient-to-r from-[#fff] to-[#abd8fc] bg-clip-text text-transparent">
             Digital Product{" "}
             <span className="font-playfair italic">
               Design <br /> Services
