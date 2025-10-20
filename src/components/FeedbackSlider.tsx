@@ -83,7 +83,7 @@ const FeedbackSlider = () => {
         >
           {testimonials.map((t, i) => (
             <SwiperSlide key={i}>
-              <div className="border p-6 sm:p-0 gap-y-5 sm:gap-y-0 rounded-2xl flex-col sm:flex items-center justify-between relative overflow-hidden">
+              <div className="border p-6 sm:p-0 gap-y-5 sm:gap-y-0 rounded-2xl flex-col flex sm:flex-row items-center justify-between relative overflow-hidden">
                 <div className="absolute bottom-[-160px] left-1/2 -translate-x-1/2 -z-30 h-[300px] w-[300px] bg-radial from-[#07284a] to-[#04203b00] to-60% opacity-60"></div>
                 <div className="sm:px-8 sm:py-12 w-full sm:w-[41%] sm:text-center relative mb-5 sm:mb-0">
                   <div className="h-full hidden sm:block  absolute right-0 top-0 w-[1px] bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
