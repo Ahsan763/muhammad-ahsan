@@ -26,7 +26,7 @@ const CursorFollower = () => {
   return (
     <div
       ref={dotRef}
-      className="fixed w-4 h-4 bg-white rounded-full z-50
+      className="hidden md:block fixed w-4 h-4 bg-white rounded-full z-50
                  -translate-x-1/2 -translate-y-1/2 pointer-events-none"
       style={{ top: 0, left: 0 }}
     />

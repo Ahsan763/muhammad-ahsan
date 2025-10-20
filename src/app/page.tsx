@@ -15,11 +15,9 @@ export default function Home() {
             <Header />
             <Hero />
           </div>
-
           <Projects />
           <Services />
           <FeedbackSlider />
-
           <Contact />
         </main>
       </div>

@@ -8,23 +8,16 @@ import { FaFacebookF, FaGoogle, FaLinkedinIn } from 'react-icons/fa6'
 import { BsStars } from 'react-icons/bs'
 import { useRouter } from 'next/navigation'
 import { FaFileDownload } from 'react-icons/fa'
-
-
 gsap.registerPlugin(ScrollTrigger)
-
-
 export default function Hero() {
   const el = useRef<HTMLDivElement | null>(null)
   const router = useRouter();
-
   useEffect(() => {
     if (!el.current) return
     const ctx = gsap.context(() => {
       gsap.from('.headingPill', { y: 40, opacity: 0, duration: .8 })
       gsap.from('.heading', { y: 20, opacity: 0, delay: .15, duration: .8 })
       gsap.from('.hero-cta', { scale: 0.95, opacity: 0, delay: .3, duration: .8 })
-
-
       gsap.utils.toArray('.card').forEach((card: any, i: number) => {
         gsap.from(card, {
           y: 30, opacity: 0, duration: .6, delay: i * 0.12,
@@ -34,8 +27,6 @@ export default function Hero() {
     }, el)
     return () => ctx.revert()
   }, [])
-
-
   return (
     <section className="pt-16 relative z-10" ref={el}>
       <div className="container">
